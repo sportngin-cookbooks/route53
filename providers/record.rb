@@ -135,10 +135,10 @@ action :delete do
   if mock?
     # Make some fake data so that we can successfully delete when testing.
     zone(aws).records.create(
-      name: name,
-      type: type,
-      value: ['1.2.3.4'],
-      ttyl: 300
+      :name => name,
+      :type => type,
+      :value => ['1.2.3.4'],
+      :ttyl => 300
     )
   end
 
